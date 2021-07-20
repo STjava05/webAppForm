@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="concern.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<title>Registrazione</title>
+</head>
+<body >
+
+
+<form action="#" method="post" th:action="@{/}" th:object="${concern}">
+<header class="main">ConCern Citizen</header><br><br>
+<input type="text" th:field="*{firstName}" placeholder="firstName"/><br><br>
+<input type="text" th:field="*{lastName}" placeholder="lastName"/><br><br>
+<input type="text" th:field="*{profession}" placeholder="profession"/><br><br>
+<input type="text" th:field="*{email}" placeholder="email"/><br><br>
+<input type="text" th:field="*{dateOfBirth}" placeholder="dateOfBirth"/><br><br>
+<input type="text" th:field="*{codiceFiscale}" placeholder="codiceFiscale"/><br><br>
+<input type="text" th:field="*{phoneNumber}" placeholder="phoneNumber"/><br><br>
+<input type="text" th:field="*{address}" placeholder="address"/><br><br>
+<input type="text" th:field="*{cityCode}" placeholder="cityCode"/><br><br>
+<input type="text" th:field="*{sex}" placeholder="sex"/><br><br>
+<input type="text" th:field="*{provincia}" placeholder="provincia"/><br><br>
+<input type="text" th:field="*{usefulInfo}" placeholder="usefulInfo"/><br><br>
+
+<label for="files">Select files:</label>
+  <input type="file" id="files" name="files" multiple><br><br>
+  <label><input type="checkbox" name="cgu">I accept the conditions of use</label><br><br>
+ 
+<input type="submit" value="salva"/><br><br>
+
+<ul th:each="concern : ${listConcern}">
+
+<li><h4 th:text="${concern.firstName}"></h4>
+<p th:text="${concern.lastName}">
+<p th:text="${concern.profession}">
+<p th:text="${nigeriaCitizen.email}">
+<p th:text="${concern.dateOfBirth}">
+<p th:text="${concern.codiceFiscale}">
+<p th:text="${concern.phoneNumber}">
+<p th:text="${concern.address}">
+<p th:text="${concern.cityCode}">
+<p th:text="${concern.sex}">
+<p th:text="${concern.provincia}">
+<p th:text="${concern.usefulInfo}">
+
+</li>
+</ul>
+</form>
+</body>
+</html>
