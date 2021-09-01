@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<title>Form Presentation</title>
+</head>
+<body>
+<form action="#" method="post" th:action="@{/edit}" th:object="${cnfnegeria}">
+<input type="hidden" th:field="*{id}"/>
+<input type="text" th:field="*{firstName}" placeholder="firstName"/><br><br>
+<input type="text" th:field="*{lastName}" placeholder="lastName"/><br><br>
+<input type="text" th:field="*{professione}" placeholder="professione"/><br><br>
+<input type="text" th:field="*{email}" placeholder="email"/><br><br>
+<input type="text" th:field="*{dateOfBirthday}" placeholder="dateOfBirthday"/><br><br>
+<input type="text" th:field="*{codiceFiscale}" placeholder="codiceFiscale"/><br><br>
+<input type="text" th:field="*{phoneNumber}" placeholder="phoneNumber"/><br><br>
+<input type="text" th:field="*{address}" placeholder="address"/><br><br>
+<input type="text" th:field="*{zipCode}" placeholder="zipCode"/><br><br>
+<input type="text" th:field="*{sex}" placeholder="sex"/><br><br>
+<input type="text" th:field="*{country}" placeholder="country"/><br><br>
+
+<input type="submit" value="salva"/><br><br>
+
+
+
+</form>
+<div>Presentation</div>
+
+
+
+</body>
+</html>
