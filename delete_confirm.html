@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<title>Form Presentation</title>
+</head>
+<body>
+<div>CONFERMA CANCELLAZIONE</div>
+<p>cancella cnfnegeria <span  th:text="${cnfnegeria}">first name</span></p>
+
+<form action="#" method="post" th:action="@{/do_delete}" th:object="${cnfnegeria}">
+<input type="hidden" th:field="*{id}"/>
+
+<input type="submit" value="cancella"/><br><br>
+
+
+
+</form>
+<div>Presentation</div>
+
+
+
+</body>
+</html>
